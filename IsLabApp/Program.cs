@@ -2,10 +2,10 @@ using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// OpenAPI (требует пакет Microsoft.AspNetCore.OpenApi 9.0.0+)
 builder.Services.AddOpenApi();
-builder.Services.AddHealthChecks();
 
-// Регистрируем проверку БД (имитация пинга)
+// Health Checks (один раз)
 builder.Services.AddHealthChecks()
     .AddCheck("Database", () => HealthCheckResult.Healthy("БД доступна"));
 
