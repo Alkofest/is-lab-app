@@ -47,5 +47,5 @@ jobs:
           context: ./IsLabApp
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/is-lab-app:latest
-            ghcr.io/${{ github.repository_owner }}/is-lab-app:${{ github.sha }}
+            ghcr.io/alkofest/is-lab-app:latest
+            ghcr.io/alkofest/is-lab-app:${{ github.sha }}
